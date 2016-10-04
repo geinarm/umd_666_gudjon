@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{mwe}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+%\usepackage{lingmacros}
+%\usepackage{tree-dvips}
+%\usepackage{blindtext}
+%\usepackage[utf8]{inputenc}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\begin{document}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+\title{Assignment 1}
+\author{Gudjon Einar Magnusson}
+
+\maketitle
+
+
+\section{}
+
+
+\section{}
+
+\subsection{}
+The solution that I found by hand is similar but not the same as the one returned by qr function in Matlab.
+Two of the axis directions are flipped but it does form a orthonormal basis.
+
+\subsection{}
+
+To find the gram matrix I wrote the following function:
+\lstinputlisting{findGram.m}
+
+
+\subsection{}
+To find a rank k version of matrix I wrote the following function.
+
+\lstinputlisting{rankk.m}
+
+
+For $A_{(2)}$ the two norm and the frobenius norm both return the same value.
+
+\begin{center}
+$\lvert\lvert A - A_{(2)} \rvert\rvert_{2} = 0.55921$
+
+$\lvert\lvert A - A_{(2)} \rvert\rvert_{F} = 0.55921$
+\end{center}
+
+
+\end{document}
