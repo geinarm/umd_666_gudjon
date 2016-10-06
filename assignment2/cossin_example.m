@@ -37,5 +37,5 @@ bp = [b;zeros(K,1)];
 Up = inv_cossin_transform(ap,bp);  % this gives now function values on fine grid with 1000 points tp
 
 plot(tp,Up); hold off; axis tight
-legend('u(t)', 'interpolation points', 'p(t)','Location','best')
+legend('u(t)', 'interpolation points', 'p(t)','Location','southeast')
 hold off
