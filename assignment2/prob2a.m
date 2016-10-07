@@ -7,8 +7,8 @@ for j = 1:length(N)
     E(j) = interperr_eq(n);
 end
 
-C = 1.0;
-alpha = -0.29;
+C = 1;
+alpha = -range(log(E)) / range(N);
 D = C*exp(alpha*N);
 
 %% Plot error

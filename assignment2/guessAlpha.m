@@ -8,8 +8,10 @@ for j = 1:length(N)
 end
 
 C = 1;
-alpha = -0.29;
+alpha = -range(log(E)) / range(N);
+%alpha = -0.29;
 D = C*exp(alpha*N);
+disp(alpha);
 
 %% Plot error
 plot(N, E, '-o'); hold on;
