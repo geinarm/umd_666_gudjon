@@ -6,12 +6,19 @@ function err = interperr_eq( n )
     xp = -1 + (0:np-1)' *2/np;
 
     U = u(x);                       % Evaluate u(x)
-    a = cos_transform(U);
-    K = np-n;
-    ap = [a;zeros(K,1)];            % extend a vector with K zeros
-    Px = inv_cos_transform(ap);
+    Px = modlagr(x, U, xp);
+    
+    %a = cos_transform(U);
+    %K = np-n;
+    %ap = [a;zeros(K,1)];            % extend a vector with K zeros
+    %Px = inv_cos_transform(ap);
     Ux = u(xp);
 
     err = max(abs(Px - Ux));
+    
+    %plot(xp, Ux); hold on;
+    %plot(x, U, 'o');
+    %plot(xp, Px);
+    %hold off;
 end
 

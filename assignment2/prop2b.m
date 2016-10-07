@@ -4,11 +4,11 @@ E = zeros(1, length(N));
 
 for j = 1:length(N)
     n = N(j);
-    E(j) = interperr_eq(n);
+    E(j) = interperr_ch(n);
 end
 
-C = 0.12;
-alpha = (max(log(E))-min(log(E))) / range(N);
+C = 1;
+alpha = -range(log(E)) / range(N);
 D = C*exp(alpha*N);
 
 %% Plot error
