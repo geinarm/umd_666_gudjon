@@ -7,16 +7,17 @@ for j = 1:length(N)
     E(j) = interperr_eq(n);
 end
 
-C = 0.12;
-alpha = (max(log(E))-min(log(E))) / range(N);
+C = 0.4;% abs(min(E)) %0.21;
+alpha = (range(log(E))) / range(N);
+%alpha = 0.27;
 D = C*exp(alpha*N);
 
 %% Plot error
-plot(N, log(E), '-o'); hold on;
-plot(N, log(D));
+plot(N, log(E), '-o', 'color', 'blue'); hold on;
+plot(N, log(D), 'color', 'red');
 axis tight;
 xlabel('n');
 ylabel('Log E_n');
-legend('Log E_n', 'Log Ce^{\alphan}','Location','northeast')
+legend('Log E_n', 'Log Ce^{\alphan}','Location','southeast')
 
 hold off;

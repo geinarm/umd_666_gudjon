@@ -12,10 +12,5 @@ function err = interperr_ch( n )
     Ux = u(xp);
 
     err = max(abs(Px - Ux));
-    
-    plot(xp, Ux); hold on;
-    plot(x, U, 'o');
-    plot(xp, Px);
-    hold off;
 end
 

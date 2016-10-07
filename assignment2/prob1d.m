@@ -21,6 +21,6 @@ plot(x, V, 'o', 'color', 'black');              % Plot interpolation points
 plot(xp, Vp, '-', 'color', 'red');              % Plot function p(t)
 
 xlabel('t');
-legend('v(t)', 'interpolation points', 'p(t)','Location','southeast')
+legend('v(x)', 'interpolation points', 'p(x)','Location','southeast')
 axis tight;
 hold off;

@@ -7,13 +7,13 @@ for j = 1:length(N)
     E(j) = interperr_ch(n);
 end
 
-C = 1;
+C = 1.04;
 alpha = -range(log(E)) / range(N);
 D = C*exp(alpha*N);
 
 %% Plot error
-plot(N, log(E), '-o'); hold on;
-plot(N, log(D));
+plot(N, log(E), '-o', 'color', 'blue'); hold on;
+plot(N, log(D), 'color', 'red');
 axis tight;
 xlabel('n');
 ylabel('Log E_n');

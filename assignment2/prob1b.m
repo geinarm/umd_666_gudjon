@@ -21,14 +21,13 @@ for j = 1:length(N)
     E(j) = max(abs(Pt - Ut));
     
     if j > 1
-        S = E(j) - E(j-1);
+        S = log(E(j)) - log(E(j-1));
         fprintf('N: %d  E: %0.5g  S: %0.5g\n', n, E(j), S);
     end
 end
 
 %% Plot error
-plot(N, log(E));
-title('Error Decay p_n(t)');
+plot(N, log(E), '-o', 'color', 'blue');
 axis tight;
 xlabel('n');
 ylabel('Log E_n');
