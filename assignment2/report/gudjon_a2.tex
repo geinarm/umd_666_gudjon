@@ -118,7 +118,7 @@ The function \textit{interperr\_eq} approximates the function $u(x) = (1+30x^2)^
 
 Figure \ref{fig_eq_err_alpha} shows the error $\norm{u-p_n}_{\infty}$ goes down at first but then increases exponentially as $n$ increases. The oscillation get worse and worse as $n$ increases.
 
-To roughly estimate the decay rate $\alpha$, I divided the range of $E$ with the range of $N$ to get a slope. Figure \ref{fig_eq_err_alpha} shows he line $log Ce^{\alpha n}$ using my estimate for $\alpha$ and it does satisfy the the condition $E_n \le Ce^{\alpha n}$.
+To roughly estimate the decay rate $\alpha$, I divided the range of $E$ with the range of $n$ to get a slope. Figure \ref{fig_eq_err_alpha} shows he line $log Ce^{\alpha n}$ using the estimate for $\alpha$ and it does satisfy the the condition $E_n \le Ce^{\alpha n}$.
 In this case $\alpha = 0.29310$ and $C = 0.4$.
 
 \noindent
@@ -138,7 +138,7 @@ In this case $\alpha = 0.29310$ and $C = 0.4$.
 The function \textit{interperr\_ch} approximates the function $u(x) = (1+30x^2)^{-1}$ with the interpolating polynomial $p_n(x)$ using $n+1$ Chebyshev nodes. By using Chebyshev nodes the oscillation issue is fixed. Nodes a placed closer together at the edges of the range.
 
 Figure \ref{fig_ch_err_alpha} shows the error $\norm{u-p_n}_{\infty}$ decreases exponentially as $n$ increases.
-It also shows my rough estimate for $\alpha$ as the line $log Ce^{\alpha n}$, it does satisfy the the condition $E_n \le Ce^{\alpha n}$.
+It also shows a rough estimate for $\alpha$ as the line $log Ce^{\alpha n}$, it does satisfy the the condition $E_n \le Ce^{\alpha n}$.
 In this case $\alpha = -0.18374$ and $C = 1.04$.
 
 \noindent

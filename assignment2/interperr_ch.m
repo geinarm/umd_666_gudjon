@@ -12,5 +12,12 @@ function err = interperr_ch( n )
     Ux = u(xp);
 
     err = max(abs(Px - Ux));
+
+
+%% plot u(t)
+plot(xp, Ux, '-', 'color', 'blue'); hold on; % Plot function u(t)
+plot(x, u(x), 'o', 'color', 'black');              % Plot interpolation points
+plot(xp, Px, '-', 'color', 'red');              % Plot function p(t)
+hold off;
 end
 
