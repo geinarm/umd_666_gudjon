@@ -30,7 +30,7 @@ plot(log(N), log(D), 'color', 'red');
 axis tight;
 xlabel('log n');
 ylabel('log E_n');
-legend('log E_n' ,'Location','northeast')
+legend('log E_n', 'log Cn^{-\alpha}' ,'Location','northeast')
 
 hold off;
 
@@ -59,6 +59,6 @@ plot(log(N), log(D), 'color', 'red');
 axis tight;
 xlabel('log n');
 ylabel('log E_n');
-legend('log E_n' ,'Location','northeast')
+legend('log E_n', 'log Cn^{-\alpha}' ,'Location','northeast')
 
 hold off;

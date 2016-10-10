@@ -21,7 +21,7 @@ for j = 1:length(N)
     E(j) = max(abs(Pt - Ut));
     
     if j > 1
-        S = log(E(j)) - log(E(j-1));
+        S = (log(E(j)) - log(E(j-1))) / (N(j)-N(j-1));
         fprintf('N: %d  E: %0.5g  S: %0.5g\n', n, E(j), S);
     end
 end
